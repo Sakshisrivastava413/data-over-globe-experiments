@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style> body { margin: 0; } </style>
+
+  <script src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/babel-standalone"></script>
+
+  <script src="https://unpkg.com/d3"></script>
+  <script src="https://unpkg.com/d3-dsv"></script>
+
+  <script src="https://unpkg.com/react-globe.gl"></script>
+  <!--<script src="../../dist/react-globe.gl.js"></script>-->
+</head>
+
+<body>
+<div id="globeViz"></div>
+
+<script type="text/jsx">
+  const { useState, useEffect, useRef } = React;
+  const World = () => {
+    const globeEl = useRef();
+    const [popData, setPopData] = useState([]);
+    useEffect(() => {
+      // load data
+      fetch('./world_population.csv').then(res => res.text())
+        .then(csv => d3.csvParse(csv, ({ lat, lng, pop }) => ({ lat: +lat, lng: +lng, pop: +pop })))
+        .then(setPopData);
+    }, []);
+    useEffect(() => {
+      // Auto-rotate
+      globeEl.current.controls().autoRotate = true;
+      globeEl.current.controls().autoRotateSpeed = 0.1;
+    }, []);
+    const weightColor = d3.scaleSequentialSqrt(d3.interpolateYlOrRd)
+      .domain([0, 1e7]);
+    return <Globe
+      ref={globeEl}
+      globeImageUrl="https://unpkg.com/three-globe/example/img/earth-night.jpg"
+      bumpImageUrl="https://unpkg.com/three-globe/example/img/earth-topology.png"
+      hexBinPointsData={popData}
+      hexBinPointWeight="pop"
+      hexAltitude={d => d.sumWeight * 6e-8}
+      hexBinResolution={4}
+      hexTopColor={d => weightColor(d.sumWeight)}
+      hexSideColor={d => weightColor(d.sumWeight)}
+      hexBinMerge={true}
+      enablePointerInteraction={false}
+    />;
+  };
+  ReactDOM.render(
+    <World />,
+    document.getElementById('globeViz')
+  );
+</script>
+</body>
+</html>

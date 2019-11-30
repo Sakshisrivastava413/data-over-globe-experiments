@@ -1,0 +1,470 @@
+[
+  {
+    "position": [
+      77.21811382,
+      28.63287569
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x030d6b3ccd12d4d80bda74b07eeeba5bfd4b7ded18dd4f5860efdacdd627ebb8",
+    "createdAt": "2019-04-27T12:34:53Z"
+  },
+  {
+    "position": [
+      77.15671403,
+      28.54340005
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x06276cc8671b25841c93f8b7c32e78d6b9e03228938c696ca3896c46dbef7590",
+    "createdAt": "2018-09-27T04:54:15Z"
+  },
+  {
+    "position": [
+      77.21922358,
+      28.52818639
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x06f6586257d6e89c80d2d95f3fa6565b2cf65d5f651727bdeba9e8e5b245c4c0",
+    "createdAt": "2018-09-26T12:03:28Z"
+  },
+  {
+    "position": [
+      77.24580562,
+      28.60395947
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x0c48842ecc29a66578dfc2f4ecc75cb2a5d5b5d979582ace038ffdcfafb5fb8e",
+    "createdAt": "2018-09-26T18:32:56Z"
+  },
+  {
+    "position": [
+      77.23912792,
+      28.62165718
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x0f5df3e696529550fd077ea6c618f4d08401586f1505bb98ab155296486f51a2",
+    "createdAt": "2018-09-27T06:05:03Z"
+  },
+  {
+    "position": [
+      77.1497071,
+      28.69604289
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x15a77c3c2104b49797a168d0848f0e2e16f954b3fd8d824abc80996416bd5249",
+    "createdAt": "2018-09-27T19:29:33Z"
+  },
+  {
+    "position": [
+      77.21966615,
+      28.63435895
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x1c8ab04e757572a238b98066309fcd4600ff9163fc3de503e028540a8e93aec8",
+    "createdAt": "2019-04-27T12:55:44Z"
+  },
+  {
+    "position": [
+      77.24309759,
+      28.61839143
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x2304d5f85942e61bbd384471f3f5750a0d81aaec6113d78b07a644a397f78bd2",
+    "createdAt": "2018-09-27T06:14:55Z"
+  },
+  {
+    "position": [
+      77.22900962,
+      28.66660648
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x26658369e75bf4480a3a909687eef7d1f07589566050e83b1917b9836ecfacf7",
+    "createdAt": "2018-09-26T19:14:26Z"
+  },
+  {
+    "position": [
+      77.20915725,
+      28.62644442
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x26e15a79d08f1cbd78e33ef6ab309c680cc157c326a8e0ac8f314651a8b7e4e1",
+    "createdAt": "2018-09-26T18:11:23Z"
+  },
+  {
+    "position": [
+      77.20609618,
+      28.56816689
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x270c0eae09c30503b65a2b11d6e449afe93c3b4d2e7e51c8b76191989af13934",
+    "createdAt": "2018-09-27T09:56:10Z"
+  },
+  {
+    "position": [
+      77.21949382,
+      28.63504526
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x27b802037a0242f91c7178d688907ee2a60df1bd24fc65b418da7c5cca0ff65d",
+    "createdAt": "2019-04-27T13:03:54Z"
+  },
+  {
+    "position": [
+      77.21170703,
+      28.62094724
+    ],
+    "stakedvalue": 872.44,
+    "listingHash": "0x27d8d250365a046b035203ca2bb442eca5797b755e4427bbb9e81adaec49b2d5",
+    "createdAt": "2018-09-27T20:14:55Z"
+  },
+  {
+    "position": [
+      77.20815914,
+      28.61716046
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x2a6d54367d4656367342c1b3663c867b99bb3b7e11918cd3f6f5a89e000e2a8e",
+    "createdAt": "2018-09-25T22:15:16Z"
+  },
+  {
+    "position": [
+      77.2505481,
+      28.59335552
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x2a8673159e7aa1864f9e60befa112dbaaa10f24bee4afd1a0b92cf04d2038d25",
+    "createdAt": "2018-09-26T17:38:19Z"
+  },
+  {
+    "position": [
+      77.20615754,
+      28.59993062
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x334e5e3f2b2da8aa6dddfd7f0fb7acf1bcb3dca292994988aa58679d702d3975",
+    "createdAt": "2018-09-27T10:20:34Z"
+  },
+  {
+    "position": [
+      77.21647533,
+      28.62712587
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x3a8518d916c6e75aa6276fc59e6306af0343ae81cc5a63a5a1c7dc124b1bdd5d",
+    "createdAt": "2018-09-26T17:56:58Z"
+  },
+  {
+    "position": [
+      77.24080632,
+      28.65605769
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x4258af79f712bb52ece866e6986d3dfefdc99d690c7b5d922c47db6bd8d36fc3",
+    "createdAt": "2018-09-26T10:47:48Z"
+  },
+  {
+    "position": [
+      77.21940028,
+      28.63480135
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x42966345ffeae3d326872f62502f2bb2b888e8d335dc1fbf600b4c8109275c3e",
+    "createdAt": "2019-04-27T13:00:23Z"
+  },
+  {
+    "position": [
+      77.23438678,
+      28.61001841
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x4522499eda282056128036852d4d4cc8b829fe75bfbb0b8faeb5ea37ed000ed3",
+    "createdAt": "2018-09-27T20:31:38Z"
+  },
+  {
+    "position": [
+      77.24946516,
+      28.64060196
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x4b23999d01ebe41e187dd1f4f01b209876c20c9276286b697b8cae1c69da6ce3",
+    "createdAt": "2018-09-26T18:04:21Z"
+  },
+  {
+    "position": [
+      77.32201288,
+      28.56482922
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x5107e2b66092adad735a2139f9cb95755e5f8ffff27b7baa0a2b1a1e9a45c043",
+    "createdAt": "2018-09-27T05:08:56Z"
+  },
+  {
+    "position": [
+      77.21779564,
+      28.63410381
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x52cdb5f9ad08b4e2a63c36e3f31c29c9d34fcb31d142b413067d128ca14c0f3f",
+    "createdAt": "2019-04-27T12:46:17Z"
+  },
+  {
+    "position": [
+      77.21827274,
+      28.63378529
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x533fabdd837142de37a350eb504d0559cc8cbe103911ebdb6b3de92a8cebece5",
+    "createdAt": "2019-04-27T12:43:49Z"
+  },
+  {
+    "position": [
+      77.1559667,
+      28.54267065
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x582e9b095a85cd7583546252a935b1c57244a1c56833a518763e23ddf73028e5",
+    "createdAt": "2018-09-27T04:46:35Z"
+  },
+  {
+    "position": [
+      77.32598757,
+      28.56756625
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x59114712ab6b1ae465ef5afaf94cf1ffc274e765858f3f91c91e075a0f861430",
+    "createdAt": "2018-09-26T12:11:20Z"
+  },
+  {
+    "position": [
+      77.19804017,
+      28.60388353
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x652647da57a990dd0fa803ad34e535428779a2172f17eeb4289da63012756f0f",
+    "createdAt": "2018-09-27T10:10:49Z"
+  },
+  {
+    "position": [
+      77.27733834,
+      28.61248554
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x6af7013e8fd36e54e4c947d5d23bb7bbb566c2285332c3b21fecbcae4648b8d7",
+    "createdAt": "2018-09-26T17:45:34Z"
+  },
+  {
+    "position": [
+      77.24561283,
+      28.61283003
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x6c43accc0fbe4872cf6f17202ed2f285e31790c04a7a624bf9416e21232387a0",
+    "createdAt": "2018-09-27T19:33:52Z"
+  },
+  {
+    "position": [
+      77.21854934,
+      28.63331909
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x70356c0beac1ff038d0435114e82a26b179405e3ded581dd4f0e5348a1df6b1b",
+    "createdAt": "2019-04-27T12:43:16Z"
+  },
+  {
+    "position": [
+      77.23347751,
+      28.65059034
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x75885fa8b6d02fbc23c19512f70232d727d1803f4e431df52833c748d2cb9667",
+    "createdAt": "2018-09-26T11:01:34Z"
+  },
+  {
+    "position": [
+      77.19776826,
+      28.61444187
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x7ecd46231c0075f71ec873a53f7a03d95ae834776f215caff121d89150dfedd6",
+    "createdAt": "2018-09-27T19:59:12Z"
+  },
+  {
+    "position": [
+      77.25860981,
+      28.55329254
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x814eb7f4730144249452df59943418c9357c3c716ad416ff43f6549078d38633",
+    "createdAt": "2018-09-26T11:15:25Z"
+  },
+  {
+    "position": [
+      77.21930372,
+      28.61188707
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x844611f0d9917c0e7738ea20c0251adf273f72f348a601cb92de4e559f296677",
+    "createdAt": "2018-09-27T20:26:19Z"
+  },
+  {
+    "position": [
+      77.18588708,
+      28.52420046
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x8588b8bedeb4944b9df963806925cd9e19f9233daaf19e959750ffe84d9dbb5a",
+    "createdAt": "2018-09-26T10:53:33Z"
+  },
+  {
+    "position": [
+      77.08991161,
+      28.55730982
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x894b0227ea6be28d8ec72a3acd94702d1ce1f9de32fbed4f24fac23f0af806e5",
+    "createdAt": "2018-09-22T18:36:04Z"
+  },
+  {
+    "position": [
+      77.32137451,
+      28.56707842
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x8edae9faebf795151f292aca8c9932dfe3640e0b3581a6fc176102a1c254e5bd",
+    "createdAt": "2018-09-27T05:35:11Z"
+  },
+  {
+    "position": [
+      77.19940139,
+      28.61437482
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x91a64c1de4988c35d866b763107aec2bdc7c5d274c4ad700d07439348caef5ec",
+    "createdAt": "2018-09-26T17:50:52Z"
+  },
+  {
+    "position": [
+      77.1809716,
+      28.58503849
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0x9429dafa06a3f3cf084ebfa227e3593854a2339ed04477a3ba856c68a773b622",
+    "createdAt": "2018-09-27T19:49:47Z"
+  },
+  {
+    "position": [
+      77.21061202,
+      28.58924721
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xa61e84ca3e917130368136ca3b3de2c8e94becc122be14782c77ac1f43637158",
+    "createdAt": "2018-09-26T18:49:41Z"
+  },
+  {
+    "position": [
+      77.21075719,
+      28.56535024
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xad2484555b8c64ae31349015ec5f345fda95199032fdbf46eceb4f4aaad48500",
+    "createdAt": "2018-09-27T09:44:03Z"
+  },
+  {
+    "position": [
+      77.17376618,
+      28.59739275
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xb1d53d14c10fbea00091ca09c02c5137eb0d81a07535edd5031ff46048fa5324",
+    "createdAt": "2018-09-27T05:43:10Z"
+  },
+  {
+    "position": [
+      77.26006558,
+      28.51377773
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xbfac28a82300305a4e77d5062ab57d2dbbd444bca9969e9b0177c9127f0c1574",
+    "createdAt": "2018-09-26T19:03:26Z"
+  },
+  {
+    "position": [
+      77.21974695,
+      28.59313709
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xc250eb34e1d392c3f232c4297287e08d4929bcffef7c0726a09d78a53789891c",
+    "createdAt": "2018-09-26T18:24:10Z"
+  },
+  {
+    "position": [
+      77.2172763,
+      28.63394556
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xc31500f1e16c604edf13a640279aaa9c1756c6983a597d91286eae8c4d959a2f",
+    "createdAt": "2019-04-27T12:48:31Z"
+  },
+  {
+    "position": [
+      77.22500576,
+      28.62610043
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xc38a993114a3606fd34ee8c9c9fbf6d411ccd0faa047ee1e16ca18d0b1733b8b",
+    "createdAt": "2018-09-27T20:40:25Z"
+  },
+  {
+    "position": [
+      77.10619664,
+      28.64232494
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xca7061df65988b8fc5e429842f649fdbffd0024ca3e1544c5fdfdca81f9d6657",
+    "createdAt": "2018-09-26T12:22:03Z"
+  },
+  {
+    "position": [
+      77.21965844,
+      28.6352642
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xcc1edc3d8dc9f1413b3040d1b538a4711609c344c6c669505974c58b633fa8fb",
+    "createdAt": "2019-04-27T13:06:26Z"
+  },
+  {
+    "position": [
+      77.21798608,
+      28.63403876
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xd535c21ceebc293106f3b28dd39c24411de0ac875608245fc62a1d2a13c84eb6",
+    "createdAt": "2019-04-27T12:50:47Z"
+  },
+  {
+    "position": [
+      77.09689675,
+      28.62212422
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xdbf90822e9b8ab1955bec6f8b0ba8e6c64935cdcacf0690fdd65deb36c39c108",
+    "createdAt": "2018-09-27T05:56:54Z"
+  },
+  {
+    "position": [
+      77.22948873,
+      28.61290094
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xe5808e6cec3324e57564cb8051080ee1c80018365fa7c44cebb80fc20303c91a",
+    "createdAt": "2018-09-22T14:23:21Z"
+  },
+  {
+    "position": [
+      77.21952533,
+      28.63290167
+    ],
+    "stakedvalue": 50.00000000000001,
+    "listingHash": "0xff6c8709d923b4db180d6435a894aa3dab76271e8ecee7e2494bb610836e5060",
+    "createdAt": "2018-09-26T19:23:22Z"
+  }
+]
