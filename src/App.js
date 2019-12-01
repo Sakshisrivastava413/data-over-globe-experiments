@@ -4,7 +4,7 @@ import Globe from './components/globe';
 import TimeSeries from './components/timeseries';
 
 const transformData = data => data
-  .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
+  .sort((a, b) => new Date(a.createdAt) - new Date(b.createdAt))
   .map((item) => ({
     createdAt: item.state.createdAt,
     lat: Geohash.decode(item.geohash).lat,
@@ -14,7 +14,6 @@ const transformData = data => data
 
 const getDataDateChunks = data => {
   const chunks = {};
-  data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
   data.forEach(p => {
     const date = new Date(p.createdAt);
     const id = `${date.getFullYear()}-${date.getMonth()}`;
@@ -49,7 +48,8 @@ class App extends React.Component {
       filteredData: data,
       dataDateChunks,
       timelineMin: 0,
-      timelineMax: Object.keys(dataDateChunks).length - 1
+      timelineMax: dataDateChunks.length - 1,
+      globalMax: dataDateChunks.length - 1
     });
   }
 
@@ -68,19 +68,55 @@ class App extends React.Component {
   }
 
   toggle() {
+    const { playing } = this.state;
+    this.setState({ playing: !playing });
 
+    if (this.showInterval) {
+      clearInterval(this.showInterval);
+      this.showInterval = !this.showInterval;
+      return;
+    }
+
+    const { timelineMax, timelineMin, globalMax } = this.state;
+
+    this.setState(
+      {
+        timelineMin,
+        timelineMax:
+          timelineMax !== globalMax
+            ? timelineMax + 1
+            : timelineMin + 1,
+      },
+      () => {
+        if (this.showInterval) clearInterval(this.showInterval);
+        this.showInterval = setInterval(() => {
+          const { timelineMin, timelineMax } = this.state;
+          if (timelineMax + 1 > globalMax) return this.toggle();
+          this.filterData(timelineMin, timelineMax + 1);
+        }, 2000);
+      },
+    );
   }
 
   reset() {
-
+    const { playing, dataDateChunks } = this.state;
+    if (playing) this.toggle();
+    this.filterData(0, dataDateChunks.length - 1);
   }
 
   render() {
-    const { loading, data, filteredData, dataDateChunks, timelineMin, timelineMax } = this.state;
+    const {
+      loading,
+      playing,
+      filteredData,
+      dataDateChunks,
+      timelineMin,
+      timelineMax
+    } = this.state;
 
     if (loading) return <p>loading...</p>;
 
-    const [min, max] = [0, Object.keys(dataDateChunks).length - 1];
+    const [min, max] = [0, dataDateChunks.length - 1];
 
     return (
       <div>
@@ -92,19 +128,19 @@ class App extends React.Component {
         <TimeSeries
           display={true}
           count={2}
-          length={data.length || 0}
+          length={filteredData.length || 0}
           minRange={min}
           maxRange={max}
           curMinVal={timelineMin}
           curMaxVal={timelineMax}
-          curMinDate={filteredData[timelineMin] && filteredData[timelineMin].createdAt}
-          curMaxDate={filteredData[timelineMax] && filteredData[timelineMax].createdAt}
+          curMinDate={dataDateChunks[timelineMin][0].createdAt}
+          curMaxDate={dataDateChunks[timelineMax][0].createdAt}
           initialMinValue={min}
           initialMaxValue={max}
           filterData={this.filterData}
           play={this.toggle}
           reset={this.reset}
-          isPlayButton={true}
+          isPlayButton={!playing}
         />
       </div>
     );
