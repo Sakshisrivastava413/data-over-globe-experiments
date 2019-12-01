@@ -15,11 +15,11 @@ export default ({ data, pointWeight, maxAltVal }) => (
 		hexBinPointWeight={pointWeight}
 		hexAltitude={(d) => {
 			const sum = Math.min(d.sumWeight, maxAltVal);
-			return sum / maxAltVal;
+			return sum / (maxAltVal + 100);
 		}}
 		hexSideColor={() => '#0092FF'}
 		hexTopColor={() => '#0092FF'}
-		hexTransitionDuration={2000}
+		hexTransitionDuration={1000}
 		hexLabel={(d) => {
 			const k = d.points.reduce((acc, val) => acc + val.stakedvalue ,0)
 			return `Staked Value: ${k} \n Points: ${d.sumWeight}`;
