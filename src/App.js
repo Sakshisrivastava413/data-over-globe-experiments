@@ -94,7 +94,7 @@ class App extends React.Component {
           const { timelineMin, timelineMax } = this.state;
           if (timelineMax + 1 > globalMax) return this.toggle();
           this.filterData(timelineMin, timelineMax + 1);
-        }, 2000);
+        }, 3000);
       },
     );
   }

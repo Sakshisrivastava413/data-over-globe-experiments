@@ -32,8 +32,14 @@ const TimeSeriesSlider = (props) => {
 
   const formatDate = dateStr => {
     const date = new Date(dateStr);
-    return `${date.getMonth() + 1} / ${date.getFullYear()}`;
-  }
+    const months = ['Jan', 'Feb', 'March', 'April', 'May', 'June', 'July', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+    return (
+      <div className="text-white">
+        <div>{months[date.getMonth()]}</div>
+        <div>{date.getFullYear()}</div>
+      </div>
+    );
+  };
 
   return (
     <div className="abs-container-bottom main-container-bottom">
@@ -64,14 +70,14 @@ const TimeSeriesSlider = (props) => {
         handleStyle={[
           {
             backgroundColor: 'white',
-            borderRadius: '0',
+            borderRadius: '10px',
             border: '0',
             width: '8px',
             padding: '0',
           },
           {
             backgroundColor: 'white',
-            borderRadius: '0',
+            borderRadius: '10px',
             border: '0',
             width: '8px',
             padding: '0',
