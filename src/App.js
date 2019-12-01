@@ -1,6 +1,7 @@
 import React from 'react';
 import Geohash from 'latlon-geohash';
 import Globe from './components/globe';
+import Analytics from './components/analytics';
 import TimeSeries from './components/timeseries';
 
 const transformData = data => data
@@ -120,6 +121,7 @@ class App extends React.Component {
 
     return (
       <div>
+        <Analytics display />
         <Globe
           data={filteredData}
           pointWeight="stakedvalue"
