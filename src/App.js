@@ -2,6 +2,7 @@ import React from 'react';
 import Geohash from 'latlon-geohash';
 import Globe from './components/globe';
 import TimeSeries from './components/timeseries';
+import AnalyticsPanel from './components/AnalyticsPanel';
 
 const transformData = data => data
   .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
@@ -66,6 +67,7 @@ class App extends React.Component {
 
     return (
       <div>
+        <AnalyticsPanel />
         <Globe
           data={filteredData}
           pointWeight="stakedvalue"
