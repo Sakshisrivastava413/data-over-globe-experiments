@@ -30,6 +30,11 @@ const TimeSeriesSlider = (props) => {
     filterData(event[0], event[1]);
   };
 
+  const formatDate = dateStr => {
+    const date = new Date(dateStr);
+    return `${date.getMonth() + 1} / ${date.getFullYear()}`;
+  }
+
   return (
     <div className="abs-container-bottom main-container-bottom">
       <div className="date-row">
@@ -41,10 +46,10 @@ const TimeSeriesSlider = (props) => {
             <button type="button" className="button-img-container">
               <img onClick={reset} className="play-pause-btn" alt="PlayPauseButton" src={resetButton} />
             </button>
-            <div>{length > 0 ? (new Date(curMinDate).toLocaleDateString().split(',')[0]) : ''}</div>
+            <div>{length > 0 ? formatDate(curMinDate) : ''}</div>
           </div>
         </div>
-        <div>{length > 0 ? (new Date(curMaxDate).toLocaleDateString().split(',')[0]) : ''}</div>
+        <div>{length > 0 ? formatDate(curMaxDate) : ''}</div>
       </div>
       <Range
         onChange={filterDate}
