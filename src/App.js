@@ -42,6 +42,11 @@ class App extends React.Component {
   }
 
   async componentDidMount() {
+    window.onresize = function(e) {
+      if (window.RT) clearTimeout(window.RT);
+      window.RT = setTimeout(function()
+      { this.location.reload(false); }, 10)
+    }
     const response = await fetch('/data.json').then(res => res.json());
     const data = transformData(response);
     const dataDateChunks = Object.values(getDataDateChunks(data));
