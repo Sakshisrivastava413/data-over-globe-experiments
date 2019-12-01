@@ -6,11 +6,23 @@ import TimeSeries from './components/timeseries';
 const transformData = data => data
   .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
   .map((item) => ({
-    ...item,
+    createdAt: item.state.createdAt,
     lat: Geohash.decode(item.geohash).lat,
     lng: Geohash.decode(item.geohash).lon,
-    stakedvalue: parseFloat((parseInt(item.deposit, 16) * 10 ** -18).toFixed(2)),
+    stakedvalue: parseFloat((parseInt(item.state.deposit, 16) * 10 ** -18).toFixed(2)),
   }));
+
+const getDataDateChunks = data => {
+  const chunks = {};
+  data.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
+  data.forEach(p => {
+    const date = new Date(p.createdAt);
+    const id = `${date.getFullYear()}-${date.getMonth()}`;
+    if (!chunks[id]) chunks[id] = [];
+    chunks[id].push(p);
+  });
+  return chunks;
+};
 
 class App extends React.Component {
 
@@ -19,6 +31,7 @@ class App extends React.Component {
     this.state = {
       data: [],
       filteredData: [],
+      loading: true,
     };
 
     this.reset = this.reset.bind(this);
@@ -27,26 +40,29 @@ class App extends React.Component {
   }
 
   async componentDidMount() {
-    const response = await fetch('/data1000.json').then(res => res.json());
+    const response = await fetch('/data.json').then(res => res.json());
     const data = transformData(response);
+    const dataDateChunks = Object.values(getDataDateChunks(data));
     this.setState({
+      loading: false,
       data,
       filteredData: data,
+      dataDateChunks,
       timelineMin: 0,
-      timelineMax: data.length - 1
+      timelineMax: Object.keys(dataDateChunks).length - 1
     });
   }
 
   filterData(newMinVal, newMaxVal) {
-    const { timelineMin, timelineMax, data } = this.state;
+    const { timelineMin, timelineMax, dataDateChunks } = this.state;
 
-    console.log(newMinVal, newMaxVal);
-    
     if (newMinVal !== timelineMin || newMaxVal !== timelineMax) {
       this.setState({
         timelineMin: newMinVal,
         timelineMax: newMaxVal,
-        filteredData: data.slice(newMinVal, newMaxVal),
+        filteredData: dataDateChunks
+          .slice(newMinVal, newMaxVal)
+          .reduce((a, b) => a.concat(b), []),
       });
     }
   }
@@ -60,9 +76,11 @@ class App extends React.Component {
   }
 
   render() {
-    const { data, filteredData, timelineMin, timelineMax } = this.state;
+    const { loading, data, filteredData, dataDateChunks, timelineMin, timelineMax } = this.state;
 
-    const [min, max] = [0, data.length - 1];
+    if (loading) return <p>loading...</p>;
+
+    const [min, max] = [0, Object.keys(dataDateChunks).length - 1];
 
     return (
       <div>
