@@ -59,7 +59,7 @@ const TimeSeriesSlider = (props) => {
         count={count}
         defaultValue={[initialMinValue, initialMaxValue]}
         allowCross={false}
-        pushable={false}
+        pushable={1}
         trackStyle={[{ backgroundColor: '#363636' }]}
         handleStyle={[
           {
