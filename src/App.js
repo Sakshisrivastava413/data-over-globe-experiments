@@ -32,6 +32,8 @@ class App extends React.Component {
       data: [],
       filteredData: [],
       loading: true,
+      totalStackedValue: null,
+      foamUSDRate: null,
     };
 
     this.reset = this.reset.bind(this);
@@ -43,6 +45,9 @@ class App extends React.Component {
     const response = await fetch('/data.json').then(res => res.json());
     const data = transformData(response);
     const dataDateChunks = Object.values(getDataDateChunks(data));
+    const foamUSDResponse = await fetch('https://poloniex.com/public?command=returnTicker').then(res => res.json());
+    const {BTC_FOAM, USDC_BTC } = foamUSDResponse;
+
     this.setState({
       loading: false,
       data,
@@ -50,20 +55,30 @@ class App extends React.Component {
       dataDateChunks,
       timelineMin: 0,
       timelineMax: dataDateChunks.length - 1,
-      globalMax: dataDateChunks.length - 1
+      globalMax: dataDateChunks.length - 1,
+      totalStackedValue: data
+        .map(d => d.stakedvalue)
+        .reduce((a, b) => a + b, 0)
+        .toFixed(2),
+      foamUSDRate: BTC_FOAM.last * USDC_BTC.last
     });
   }
 
   filterData(newMinVal, newMaxVal) {
     const { timelineMin, timelineMax, dataDateChunks } = this.state;
+    const filteredData = dataDateChunks
+    .slice(newMinVal, newMaxVal)
+    .reduce((a, b) => a.concat(b), []);
 
     if (newMinVal !== timelineMin || newMaxVal !== timelineMax) {
       this.setState({
         timelineMin: newMinVal,
         timelineMax: newMaxVal,
-        filteredData: dataDateChunks
-          .slice(newMinVal, newMaxVal)
-          .reduce((a, b) => a.concat(b), []),
+        filteredData,
+        totalStackedValue: filteredData
+          .map(d => d.stakedvalue)
+          .reduce((a, b) => a + b, 0)
+          .toFixed(2),
       });
     }
   }
@@ -112,7 +127,9 @@ class App extends React.Component {
       filteredData,
       dataDateChunks,
       timelineMin,
-      timelineMax
+      timelineMax,
+      totalStackedValue,
+      foamUSDRate
     } = this.state;
 
     if (loading) return <p>loading...</p>;
@@ -121,7 +138,10 @@ class App extends React.Component {
 
     return (
       <div>
-        <Analytics display />
+        <Analytics
+          display
+          stackedValue={totalStackedValue}
+          USDRate={foamUSDRate} />
         <Globe
           data={filteredData}
           pointWeight="stakedvalue"
