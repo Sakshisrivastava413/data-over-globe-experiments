@@ -34,11 +34,13 @@ class App extends React.Component {
       loading: true,
       totalStackedValue: null,
       foamUSDRate: null,
+      isRotateState: false
     };
 
     this.reset = this.reset.bind(this);
     this.toggle = this.toggle.bind(this);
     this.filterData = this.filterData.bind(this);
+    this.toggleRotate = this.toggleRotate.bind(this);
   }
 
   async componentDidMount() {
@@ -125,6 +127,10 @@ class App extends React.Component {
     this.filterData(0, dataDateChunks.length - 1);
   }
 
+  toggleRotate() {
+    this.setState({ isRotateState: !this.state.isRotateState });
+  }
+
   render() {
     const {
       loading,
@@ -134,7 +140,8 @@ class App extends React.Component {
       timelineMin,
       timelineMax,
       totalStackedValue,
-      foamUSDRate
+      foamUSDRate,
+      isRotateState
     } = this.state;
 
     if (loading) return <p>loading...</p>;
@@ -146,11 +153,14 @@ class App extends React.Component {
         <Analytics
           display
           stackedValue={totalStackedValue}
-          USDRate={foamUSDRate} />
+          USDRate={foamUSDRate}
+          toggleRotate={this.toggleRotate}
+        />
         <Globe
           data={filteredData}
           pointWeight="stakedvalue"
           maxAltVal={10e2}
+          rotationStatus={isRotateState}
         />
         <TimeSeries
           display={true}
